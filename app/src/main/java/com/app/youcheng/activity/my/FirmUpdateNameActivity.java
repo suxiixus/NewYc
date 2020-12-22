@@ -2,10 +2,7 @@ package com.app.youcheng.activity.my;
 
 
 import android.content.Intent;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -17,11 +14,10 @@ import com.app.youcheng.R;
 import com.app.youcheng.base.BaseActivity;
 import com.app.youcheng.dialog.PhotoDialog;
 import com.app.youcheng.entity.User;
-import com.app.youcheng.utils.FileUtils;
+import com.app.youcheng.utils.CameraPhotoUtils;
 import com.app.youcheng.utils.NetCodeUtils;
 import com.app.youcheng.utils.StringUtils;
 import com.app.youcheng.utils.ToastUtils;
-import com.app.youcheng.utils.UriUtils;
 import com.bumptech.glide.Glide;
 import com.yanzhenjie.permission.Action;
 import com.yanzhenjie.permission.AndPermission;
@@ -58,15 +54,13 @@ public class FirmUpdateNameActivity extends BaseActivity {
     EditText etEnterpriseCode;
 
     private int type = 1;
-    private String filename = "header.jpg";
 
-    private File imageFile;
-    private File imageSelectFile;
-    private Uri imageUri;
     private String oneData;
     //    private String twoData;
     private String threeData;
     private String fourData;
+
+    private CameraPhotoUtils cameraPhotoUtils;
 
     private Disposable disposable1;
 
@@ -87,7 +81,12 @@ public class FirmUpdateNameActivity extends BaseActivity {
     protected void initData() {
         super.initData();
 
-        imageFile = FileUtils.getMyFile(this, filename);
+        cameraPhotoUtils = new CameraPhotoUtils(this, new CameraPhotoUtils.CameraPhotoListener() {
+            @Override
+            public void onFinish(File outputFile) {
+                doUpload(outputFile);
+            }
+        }, false);
     }
 
     @OnClick({R.id.tvGoto, R.id.iv1, R.id.iv3, R.id.iv4,})
@@ -134,18 +133,17 @@ public class FirmUpdateNameActivity extends BaseActivity {
     /**
      * 0 - 拍照   1 - 相册
      */
-    private void checkPermission(final int type) {
+    private void checkPermission(final int photoType) {
         AndPermission.with(this)
                 .runtime()
-                .permission(Permission.Group.CAMERA)
-                .permission(Permission.Group.STORAGE)
+                .permission(Permission.Group.CAMERA, Permission.Group.STORAGE)
                 .onGranted(new Action<List<String>>() {
                     @Override
                     public void onAction(List<String> data) {
-                        if (type == 0) {
-                            startCamera();
+                        if (photoType == 0) {
+                            cameraPhotoUtils.startCamera();
                         } else {
-                            chooseFromAlbum();
+                            cameraPhotoUtils.selectPhoto();
                         }
                     }
                 })
@@ -161,84 +159,13 @@ public class FirmUpdateNameActivity extends BaseActivity {
                 }).start();
     }
 
-    /**
-     * 相机
-     */
-    private void startCamera() {
-        if (imageFile == null) {
-            ToastUtils.showToast(getString(R.string.str_unknown_error));
-            return;
-        }
-        imageUri = FileUtils.getUriForFile(this, imageFile);
-        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
-        startActivityForResult(intent, GlobalConstant.TAKE_PHOTO);
-    }
-
-    /**
-     * 相册
-     */
-    private void chooseFromAlbum() {
-        Intent intent = new Intent(Intent.ACTION_PICK);
-        intent.setType("image/*");
-        startActivityForResult(intent, GlobalConstant.CHOOSE_ALBUM);
-    }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == RESULT_OK) {
-            switch (requestCode) {
-                case GlobalConstant.TAKE_PHOTO:
-                    takePhotoReturn(resultCode, data);
-                    break;
-                case GlobalConstant.CHOOSE_ALBUM:
-                    choseAlbumReturn(resultCode, data);
-                    break;
-            }
-        }
+        cameraPhotoUtils.attachToActivityForResult(requestCode, resultCode, data);
     }
 
-    /**
-     * 相册选取返回
-     */
-    private void choseAlbumReturn(int resultCode, Intent data) {
-        if (resultCode != RESULT_OK) return;
-        imageUri = data.getData();
-        if (Build.VERSION.SDK_INT >= 19)
-            imageSelectFile = UriUtils.getUriFromKitKat(this, imageUri);
-        else
-            imageSelectFile = UriUtils.getUriBeforeKitKat(this, imageUri);
-        if (imageSelectFile == null) {
-            ToastUtils.showToast(getString(R.string.library_file_exception));
-            return;
-        }
-        doUpload(2);
-    }
-
-    /**
-     * 拍照返回
-     */
-    private void takePhotoReturn(int resultCode, Intent data) {
-        if (resultCode != RESULT_OK) return;
-        doUpload(1);
-    }
-
-    private void doUpload(int upType) {
-        File file;
-        if (upType == 1) {
-            if (imageFile == null) {
-                return;
-            }
-            file = imageFile;
-        } else {
-            if (imageSelectFile == null) {
-                return;
-            }
-            file = imageSelectFile;
-        }
-
-
+    private void doUpload(File file) {
         showLoading();
         EasyHttp.post(BaseHost.uploadUrl)
                 .params("file", file, file.getName(), listener)
@@ -254,6 +181,7 @@ public class FirmUpdateNameActivity extends BaseActivity {
                             int code = object.optInt("code");
                             if (code == GlobalConstant.OK) {
                                 String url = object.getJSONObject("data").getString("url");
+                                cameraPhotoUtils.deleteAllCache();
 
                                 if (StringUtils.isNotEmpty(url)) {
                                     if (type == 1) {

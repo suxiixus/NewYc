@@ -36,6 +36,13 @@ public class FileUtils {
         return file;
     }
 
+    public static void deleteMyFile(String filename) {
+        File file = new File(GlobalConstant.myDir, filename);
+        if (file.exists()) {
+            file.delete();
+        }
+    }
+
     /**
      * 判断是否有SD卡
      *
