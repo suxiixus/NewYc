@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#3D7EFF</color>
+
+    <color name="transparent">#00ffffff</color>
+    <color name="halfTransparent">#66ffffff</color><!--半透明-->
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#ff0000</color>
+
+    <color name="main_bg">#F6F5FA</color>
+    <color name="main_blue">#3D7EFF</color><!--应用主题蓝色-->
+    <color name="line_bg_gray">#DFE3E7</color><!--线条颜色-->
+    <color name="main_btn_gray">#F2F2F2</color>
+    <color name="pay_bg_gray">#EFEFEF</color>
+
+    <color name="font_main_black">#3B3B3B</color><!--常用黑色字体颜色，列表标题-->
+    <color name="font_main_gray">#8B94A0</color>
+    <color name="font_tab_bottom">#BEC9D4</color>
+    <color name="font_hint">#989898</color><!--editetext的hint color-->
+    <color name="font_red">#FF3366</color>
+    <color name="font_green">#3ACD97</color>
+    <color name="font_blue">#3D7EFF</color>
+    <color name="font_yellow">#FEAD00</color>
+    <color name="font_orange">#F55241</color>
+
+    <color name="btn_red">#F55241</color>
+    <color name="btn_green">#69DCB7</color>
+</resources>

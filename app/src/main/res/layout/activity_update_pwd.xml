@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <include layout="@layout/view_head" />
+
+    <View style="@style/line_bg_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/layout_sign_item">
+
+            <TextView
+                style="@style/text_view_update_item"
+                android:text="旧密码" />
+
+            <EditText
+                android:id="@+id/etOldPwd"
+                style="@style/edit_text_view_add"
+                android:hint="请填写旧密码"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <View style="@style/line_bg_gray" />
+
+        <LinearLayout style="@style/layout_sign_item">
+
+            <TextView
+                style="@style/text_view_update_item"
+                android:text="新密码" />
+
+            <EditText
+                android:id="@+id/etNewPwd"
+                style="@style/edit_text_view_add"
+                android:hint="请填写新密码"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <View style="@style/line_bg_gray" />
+
+        <LinearLayout style="@style/layout_sign_item">
+
+            <TextView
+                style="@style/text_view_update_item"
+                android:text="确认密码" />
+
+            <EditText
+                android:id="@+id/etAgain"
+                style="@style/edit_text_view_add"
+                android:hint="请再次填写新密码"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <View style="@style/line_bg_gray" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <include layout="@layout/view_head" />
+
+    <View style="@style/line_bg_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llSafe"
+            style="@style/layout_my_item">
+
+            <TextView
+                style="@style/text_view_my_item"
+                android:text="账户与安全" />
+
+            <ImageView
+                style="@style/next_black"
+                android:layout_marginRight="15dp" />
+        </LinearLayout>
+
+        <View style="@style/line_bg_gray" />
+
+        <LinearLayout
+            android:id="@+id/llSms"
+            style="@style/layout_my_item">
+
+            <TextView
+                style="@style/text_view_my_item"
+                android:text="短信接收" />
+
+            <ImageView
+                style="@style/next_black"
+                android:layout_marginRight="15dp" />
+        </LinearLayout>
+
+        <View style="@style/line_bg_gray" />
+
+        <LinearLayout
+            android:id="@+id/llOpen"
+            style="@style/layout_my_item"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/text_view_my_item"
+                android:text="公开设置" />
+
+            <ImageView
+                style="@style/next_black"
+                android:layout_marginRight="15dp" />
+        </LinearLayout>
+
+<!--        <View style="@style/line_bg_gray" />-->
+
+        <LinearLayout style="@style/layout_my_item">
+
+            <TextView
+                style="@style/text_view_my_item"
+                android:text="推送设置" />
+
+            <ImageView
+                android:id="@+id/ivMsgStatus"
+                android:layout_width="45dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/btn_green_selector" />
+        </LinearLayout>
+
+        <View style="@style/line_bg_gray" />
+
+        <LinearLayout
+            android:id="@+id/llHC"
+            style="@style/layout_my_item">
+
+            <TextView
+                style="@style/text_view_my_item"
+                android:text="清理缓存" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00 MB"
+                android:textColor="@color/font_main_gray"
+                android:textSize="@dimen/font_small" />
+
+            <ImageView
+                style="@style/next_black"
+                android:layout_marginRight="15dp" />
+        </LinearLayout>
+
+        <View style="@style/line_bg_gray" />
+
+        <LinearLayout style="@style/layout_my_item">
+
+            <TextView
+                style="@style/text_view_my_item"
+                android:text="关于" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text="V1.0.0"
+                android:textColor="@color/font_main_gray"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+
+        <View style="@style/line_bg_gray" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvLogout"
+        style="@style/btn_blue_option_no_state"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="70dp"
+        android:text="退出登录" />
+
+</LinearLayout>

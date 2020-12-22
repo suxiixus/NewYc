@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <include layout="@layout/view_head" />
+
+    <View style="@style/line_bg_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="充值金额"
+            android:textColor="@color/font_main_black"
+            android:textSize="@dimen/font_small" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_bg_white_3_corner"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/layout_my_item">
+
+            <TextView
+                style="@style/text_view_my_item"
+                android:text="充值账户" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text="科技有限公司"
+                android:textColor="@color/font_main_black"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+
+        <View style="@style/line_bg_gray" />
+
+        <LinearLayout style="@style/layout_my_item">
+
+            <TextView
+                style="@style/text_view_my_item"
+                android:text="其它金额" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:gravity="right"
+                android:hint="请输入充值金额"
+                android:textColor="@color/font_main_black"
+                android:textColorHint="@color/font_hint"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_bg_white_3_corner"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择支付方式"
+            android:textColor="@color/font_main_black"
+            android:textSize="@dimen/font_small" />
+
+        <LinearLayout style="@style/layout_my_item">
+
+            <ImageView
+                style="@style/image_view_my_item"
+                android:src="@mipmap/icon_pay_ali" />
+
+            <TextView
+                style="@style/text_view_my_item"
+                android:text="支付宝" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/paymode_selector" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/layout_my_item">
+
+            <ImageView
+                style="@style/image_view_my_item"
+                android:src="@mipmap/icon_pay_wechat" />
+
+            <TextView
+                style="@style/text_view_my_item"
+                android:text="微信" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/paymode_selector" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/layout_my_item">
+
+            <ImageView
+                style="@style/image_view_my_item"
+                android:src="@mipmap/icon_pay_bank" />
+
+            <TextView
+                style="@style/text_view_my_item"
+                android:text="银联支付" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/paymode_selector" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvAdd"
+        style="@style/btn_blue_option_no_state"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:text="确认充值" />
+
+</LinearLayout>

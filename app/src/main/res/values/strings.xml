@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">有诚</string>
+
+    <!--异常错误-->
+    <string name="str_parse_error">数据解析异常</string>
+    <string name="str_network_error">网络异常</string>
+    <string name="connection_out">服务器连接超时</string>
+    <string name="str_unknown_error">未知错误</string>
+    <string name="str_server_error">服务器异常</string>
+
+    <string name="str_no_permission">未获取权限，无法使用相关功能</string>
+    <string name="library_file_exception">图库文件返回异常</string>
+
+</resources>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bg_stroke_gray_3"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/layout_sign_item">
+
+                <ImageView
+                    style="@style/image_view_my_item"
+                    android:layout_marginLeft="15dp"
+                    android:src="@mipmap/icon_sign_mc" />
+
+                <EditText
+                    style="@style/edit_text_view_sign"
+                    android:hint="企业名称" />
+            </LinearLayout>
+
+            <View style="@style/line_bg_gray" />
+
+            <LinearLayout style="@style/layout_sign_item">
+
+                <ImageView
+                    style="@style/image_view_my_item"
+                    android:layout_marginLeft="15dp"
+                    android:src="@mipmap/icon_sign_daima" />
+
+                <EditText
+                    style="@style/edit_text_view_sign"
+                    android:hint="企业代码号" />
+            </LinearLayout>
+
+            <View style="@style/line_bg_gray" />
+
+            <LinearLayout style="@style/layout_sign_item">
+
+                <ImageView
+                    style="@style/image_view_my_item"
+                    android:layout_marginLeft="15dp"
+                    android:src="@mipmap/icon_sign_faren" />
+
+                <EditText
+                    style="@style/edit_text_view_sign"
+                    android:hint="企业法人姓名" />
+            </LinearLayout>
+
+            <View style="@style/line_bg_gray" />
+
+            <LinearLayout style="@style/layout_sign_item">
+
+                <ImageView
+                    style="@style/image_view_my_item"
+                    android:layout_marginLeft="15dp"
+                    android:src="@mipmap/icon_sign_id" />
+
+                <EditText
+                    style="@style/edit_text_view_sign"
+                    android:hint="身份证号码" />
+            </LinearLayout>
+
+            <View style="@style/line_bg_gray" />
+
+            <LinearLayout style="@style/layout_sign_item">
+
+                <ImageView
+                    style="@style/image_view_my_item"
+                    android:layout_marginLeft="15dp"
+                    android:src="@mipmap/icon_sign_phone" />
+
+                <EditText
+                    style="@style/edit_text_view_sign"
+                    android:hint="手机号码" />
+            </LinearLayout>
+
+            <View style="@style/line_bg_gray" />
+
+            <LinearLayout style="@style/layout_sign_item">
+
+                <ImageView
+                    style="@style/image_view_my_item"
+                    android:layout_marginLeft="15dp"
+                    android:src="@mipmap/icon_sign_sms" />
+
+                <EditText
+                    style="@style/edit_text_view_sign"
+                    android:hint="短信验证码" />
+            </LinearLayout>
+
+            <View style="@style/line_bg_gray" />
+
+            <LinearLayout style="@style/layout_sign_item">
+
+                <ImageView
+                    style="@style/image_view_my_item"
+                    android:layout_marginLeft="15dp"
+                    android:src="@mipmap/icon_sign_pwd" />
+
+                <EditText
+                    style="@style/edit_text_view_sign"
+                    android:hint="请输入6～12位密码" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/shape_bg_stroke_gray_3"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                style="@style/edit_text_view_sign"
+                android:layout_marginLeft="50dp"
+                android:hint="邀请码（选填）" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="友情提示：基本资料信息填写完成后不可修改，请认真填写信息。"
+            android:textColor="@color/font_main_gray"
+            android:textSize="@dimen/font_small" />
+
+    </LinearLayout>
+
+</LinearLayout>

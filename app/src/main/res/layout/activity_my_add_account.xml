@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <include layout="@layout/view_head" />
+
+    <View style="@style/line_bg_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout style="@style/layout_sign_item">
+
+            <EditText
+                android:id="@+id/etName"
+                style="@style/edit_text_view_add"
+                android:hint="员工姓名" />
+        </LinearLayout>
+
+        <View style="@style/line_bg_gray" />
+
+        <LinearLayout style="@style/layout_sign_item">
+
+            <EditText
+                android:id="@+id/etCard"
+                style="@style/edit_text_view_add"
+                android:hint="身份证号码" />
+        </LinearLayout>
+
+        <View style="@style/line_bg_gray" />
+
+        <LinearLayout style="@style/layout_sign_item">
+
+            <EditText
+                android:id="@+id/etPhone"
+                style="@style/edit_text_view_add"
+                android:hint="手机号（登录账号）" />
+        </LinearLayout>
+
+        <View style="@style/line_bg_gray" />
+
+        <LinearLayout style="@style/layout_sign_item">
+
+            <EditText
+                android:id="@+id/etSms"
+                style="@style/edit_text_view_add"
+                android:hint="短信验证码" />
+
+            <cn.iwgang.countdownview.CountdownView
+                android:id="@+id/countdownView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:visibility="gone"
+                app:isShowHour="false"
+                app:isShowMinute="false"
+                app:isShowSecond="true"
+                app:suffixGravity="center"
+                app:timeTextColor="@color/font_blue"
+                app:timeTextSize="@dimen/font_small" />
+
+            <TextView
+                android:id="@+id/tvMiao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:enabled="false"
+                android:text="s"
+                android:textColor="@color/font_blue"
+                android:textSize="@dimen/font_small"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:padding="5dp"
+                android:text="获取验证码"
+                android:textColor="@color/font_blue"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+
+        <View style="@style/line_bg_gray" />
+
+        <LinearLayout style="@style/layout_sign_item">
+
+            <EditText
+                android:id="@+id/etPwd"
+                style="@style/edit_text_view_add"
+                android:hint="登录密码"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <View style="@style/line_bg_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="友情提示："
+            android:textColor="@color/font_main_black"
+            android:textSize="@dimen/font_small" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加员工账号则授权员工企业账户所有操作权限"
+            android:textColor="@color/font_main_black"
+            android:textSize="@dimen/font_small" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvAdd"
+        style="@style/btn_blue_option_no_state"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:text="添加" />
+
+</LinearLayout>

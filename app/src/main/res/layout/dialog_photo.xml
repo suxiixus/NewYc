@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="30dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bg_white_20_corner"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvCamera"
+            style="@style/btn_blue_option_no_state"
+            android:text="拍照" />
+
+        <TextView
+            android:id="@+id/tvPhoto"
+            style="@style/btn_blue_option_no_state"
+            android:layout_marginTop="15dp"
+            android:text="相册" />
+
+        <TextView
+            android:id="@+id/tvCancel"
+            style="@style/btn_gray_option_no_state"
+            android:layout_marginTop="15dp"
+            android:text="取消" />
+    </LinearLayout>
+
+</LinearLayout>

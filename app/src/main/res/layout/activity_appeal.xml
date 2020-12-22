@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <include layout="@layout/view_head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="法人"
+                android:textColor="@color/font_main_black"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="35dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:minHeight="100dp"
+                android:padding="15dp"
+                android:text="我已申诉"
+                android:textColor="@color/font_main_black"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="35dp"
+                android:layout_weight="1"
+                android:background="@color/font_red"
+                android:minHeight="100dp"
+                android:padding="15dp"
+                android:text="收到！"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="客服"
+                android:textColor="@color/font_main_black"
+                android:textSize="@dimen/font_normal" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_bg_white_20_corner"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="评价企业"
+        android:textColor="@color/font_blue"
+        android:textSize="@dimen/font_lager" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="请输入您的评价"
+        android:textColor="@color/font_main_gray"
+        android:textSize="@dimen/font_small" />
+
+    <EditText
+        android:id="@+id/etStr"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_bg_stroke_gray_3"
+        android:gravity="top"
+        android:padding="10dp"
+        android:textColor="@color/font_main_black"
+        android:textColorHint="@color/font_hint"
+        android:textSize="@dimen/font_small" />
+
+    <TextView
+        android:id="@+id/tvSure"
+        style="@style/btn_blue_option_no_state"
+        android:layout_marginTop="20dp"
+        android:text="确定" />
+
+
+</LinearLayout>

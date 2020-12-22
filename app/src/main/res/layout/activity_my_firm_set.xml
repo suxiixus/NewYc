@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <include layout="@layout/view_head" />
+
+    <View style="@style/line_bg_gray" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <LinearLayout style="@style/layout_my_item">
+
+                <TextView
+                    style="@style/text_view_firm_set_item"
+                    android:text="企业名称" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    style="@style/text_view_firm_set_item_right" />
+            </LinearLayout>
+
+            <View style="@style/line_bg_gray" />
+
+            <LinearLayout style="@style/layout_my_item">
+
+                <TextView
+                    style="@style/text_view_firm_set_item"
+                    android:text="企业代码" />
+
+                <TextView
+                    android:id="@+id/tvCode"
+                    style="@style/text_view_firm_set_item_right" />
+            </LinearLayout>
+
+            <View style="@style/line_bg_gray" />
+
+            <LinearLayout style="@style/layout_my_item">
+
+                <TextView
+                    style="@style/text_view_firm_set_item"
+                    android:text="企业标签" />
+
+                <TextView
+                    android:id="@+id/tvLabel"
+                    style="@style/text_view_firm_set_item_right" />
+            </LinearLayout>
+
+            <View style="@style/line_bg_gray" />
+
+            <LinearLayout style="@style/layout_my_item">
+
+                <TextView
+                    style="@style/text_view_firm_set_item"
+                    android:text="注册时间" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    style="@style/text_view_firm_set_item_right" />
+            </LinearLayout>
+
+            <View style="@style/line_bg_gray" />
+
+            <LinearLayout style="@style/layout_my_item">
+
+                <TextView
+                    style="@style/text_view_my_item"
+                    android:text="账单确认收款设置" />
+
+                <TextView
+                    android:id="@+id/tvDefaultSet"
+                    style="@style/text_view_firm_set_item_right"
+                    android:text="默认已付款" />
+            </LinearLayout>
+
+            <View style="@style/line_bg_gray" />
+
+            <LinearLayout style="@style/layout_my_item">
+
+                <TextView
+                    style="@style/text_view_firm_set_item"
+                    android:text="企业联系人" />
+
+                <TextView
+                    android:id="@+id/tvMan"
+                    style="@style/text_view_firm_set_item_right" />
+            </LinearLayout>
+
+            <View style="@style/line_bg_gray" />
+
+            <LinearLayout style="@style/layout_my_item">
+
+                <TextView
+                    style="@style/text_view_firm_set_item"
+                    android:text="联系电话" />
+
+                <TextView
+                    android:id="@+id/tvPhone"
+                    style="@style/text_view_firm_set_item_right" />
+            </LinearLayout>
+
+            <View style="@style/line_bg_gray" />
+
+            <LinearLayout style="@style/layout_my_item">
+
+                <TextView
+                    style="@style/text_view_firm_set_item"
+                    android:text="企业地址" />
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    style="@style/text_view_firm_set_item_right" />
+            </LinearLayout>
+
+            <View style="@style/line_bg_gray" />
+
+            <LinearLayout style="@style/layout_my_item">
+
+                <TextView
+                    style="@style/text_view_my_item"
+                    android:text="注册资料" />
+            </LinearLayout>
+
+            <!--<View style="@style/line_bg_gray" />-->
+
+            <LinearLayout
+                style="@style/layout_my_item"
+                android:gravity="top">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="营业执照           企业logo"
+                    android:textColor="@color/font_main_black"
+                    android:textSize="@dimen/font_small" />
+
+                <ImageView
+                    android:id="@+id/iv1"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/iv2"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <View style="@style/line_bg_gray" />
+
+            <LinearLayout
+                style="@style/layout_my_item"
+                android:gravity="top">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="企业法人身份证"
+                    android:textColor="@color/font_main_black"
+                    android:textSize="@dimen/font_small" />
+
+                <ImageView
+                    android:id="@+id/iv3"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/iv4"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvUpdateName"
+                android:layout_width="90dp"
+                android:layout_height="28dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_bg_stroke_blue_50"
+                android:gravity="center"
+                android:text="更名申请"
+                android:textColor="@color/font_blue"
+                android:textSize="@dimen/font_small" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

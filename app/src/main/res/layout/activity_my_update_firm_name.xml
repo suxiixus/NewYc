@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <include layout="@layout/view_head" />
+
+    <View style="@style/line_bg_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout style="@style/layout_sign_item">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="企业名称"
+                android:textColor="@color/font_main_black"
+                android:textSize="@dimen/font_small" />
+
+            <EditText
+                android:id="@+id/etEnterpriseName"
+                style="@style/edit_text_view_sign"
+                android:hint="请填写企业名称" />
+        </LinearLayout>
+
+        <View style="@style/line_bg_gray" />
+
+        <LinearLayout style="@style/layout_sign_item">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="企业代码"
+                android:textColor="@color/font_main_black"
+                android:textSize="@dimen/font_small" />
+
+            <EditText
+                android:id="@+id/etEnterpriseCode"
+                style="@style/edit_text_view_sign"
+                android:hint="请填写企业代码" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/main_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="营业执照"
+            android:textColor="@color/font_main_black"
+            android:textSize="@dimen/font_small" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/icon_sign_add" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="上传营业执照"
+                    android:textColor="@color/font_main_gray"
+                    android:textSize="@dimen/font_mini" />
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/iv2"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="70dp"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:src="@mipmap/icon_sign_add" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:text="企业LOGO(选填)"-->
+                    <!--android:textColor="@color/font_main_gray"-->
+                    <!--android:textSize="@dimen/font_mini" />-->
+            <!--</LinearLayout>-->
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="企业法人身份证"
+            android:textColor="@color/font_main_black"
+            android:textSize="@dimen/font_small" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv3"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/icon_sign_add" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="身份证正面照"
+                    android:textColor="@color/font_main_gray"
+                    android:textSize="@dimen/font_mini" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv4"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/icon_sign_add" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="身份证反面照"
+                    android:textColor="@color/font_main_gray"
+                    android:textSize="@dimen/font_mini" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

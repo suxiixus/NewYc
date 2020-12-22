@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View style="@style/line_bg_gray" />
+
+    <LinearLayout
+        android:id="@+id/llTab"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/llHome"
+            style="@style/layout_tab_bottom_main">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/tab_home_selector" />
+
+            <TextView
+                style="@style/tab_bottom_main"
+                android:text="首页" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llEnterprise"
+            style="@style/layout_tab_bottom_main"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/tab_quan_selector" />
+
+            <TextView
+                style="@style/tab_bottom_main"
+                android:text="企业圈" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llBill"
+            style="@style/layout_tab_bottom_main"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/tab_bill_selector" />
+
+            <TextView
+                style="@style/tab_bottom_main"
+                android:text="有诚账单" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMy"
+            style="@style/layout_tab_bottom_main">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/tab_my_selector" />
+
+            <TextView
+                style="@style/tab_bottom_main"
+                android:text="我的" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
