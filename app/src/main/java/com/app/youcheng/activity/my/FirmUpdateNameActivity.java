@@ -86,7 +86,7 @@ public class FirmUpdateNameActivity extends BaseActivity {
             public void onFinish(File outputFile) {
                 doUpload(outputFile);
             }
-        }, false);
+        }, true);
     }
 
     @OnClick({R.id.tvGoto, R.id.iv1, R.id.iv3, R.id.iv4,})
